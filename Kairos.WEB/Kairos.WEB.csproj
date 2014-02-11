@@ -112,6 +112,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="App_Data\" />
     <Folder Include="Content\images\" />
     <Folder Include="Scripts\app\" />
   </ItemGroup>
@@ -136,7 +137,14 @@
     <Content Include="Content\fonts\glyphicons-halflings-regular.woff" />
     <Content Include="Content\fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="Content\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Scripts\lib\angular-route.js" />
+    <Content Include="Scripts\lib\angular-route.min.js" />
+    <Content Include="Scripts\lib\angular.js" />
+    <Content Include="Scripts\lib\angular.min.js" />
+    <Content Include="Scripts\lib\angular.min.js.map" />
+    <Content Include="Scripts\lib\angular-route.min.js.map" />
     <None Include="Scripts\lib\jquery-1.9.1.intellisense.js" />
+    <Content Include="Scripts\lib\angular-mocks.js" />
     <Content Include="Scripts\lib\bootstrap.js" />
     <Content Include="Scripts\lib\bootstrap.min.js" />
     <Content Include="Scripts\lib\jquery-1.9.1.js" />
@@ -157,7 +165,16 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Scripts\lib\jquery-1.9.1.min.map" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\Kairos.DAL\Kairos.DAL.csproj">
+      <Project>{f7235f65-70f7-4e95-9c91-a9c874c1c28b}</Project>
+      <Name>Kairos.DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Kairos.MODEL\Kairos.MODEL.csproj">
+      <Project>{33f731de-e816-45a3-88d2-0143f8f5a362}</Project>
+      <Name>Kairos.MODEL</Name>
+    </ProjectReference>
+  </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
   </ItemGroup>

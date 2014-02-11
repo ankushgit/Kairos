@@ -14,6 +14,10 @@ namespace Kairos.WEB
             bundles.Add(new ScriptBundle("~/Scripts/lib/jquery").Include(
             "~/Scripts/lib/jquery-{version}.js"));
 
+            //TIP: Always add Angular.js reference first before adding other angular libraries.
+            bundles.Add(new ScriptBundle("~/Scripts/lib/angular").Include(
+            "~/Scripts/lib/angular.js",
+            "~/Scripts/lib/angular-*"));
             
             // Use the development version of Modernizr to develop with and learn from. Then, when you're
             // ready for production, use the build tool at http://modernizr.com to pick only the tests you need.
