@@ -46,11 +46,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DbUnit.cs" />
     <Compile Include="Configurations\OpportunityConfiguration.cs" />
     <Compile Include="Configurations\ProjectConfiguration.cs" />
+    <Compile Include="IDbUnit.cs" />
+    <Compile Include="IRepository.cs" />
     <Compile Include="KairosDatabaseInitialiser.cs" />
     <Compile Include="KairosDbContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repository.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
