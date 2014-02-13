@@ -46,6 +46,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Configurations\OpportunityConfiguration.cs" />
+    <Compile Include="Configurations\ProjectConfiguration.cs" />
     <Compile Include="KairosDatabaseInitialiser.cs" />
     <Compile Include="KairosDbContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

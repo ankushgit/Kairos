@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Kairos.DAL.Configurations;
+using Kairos.MODEL;
+using System;
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
@@ -10,7 +12,10 @@ namespace Kairos.DAL
     public class KairosDbContext : DbContext
     {
         //Declare DBSets here.
+        public DbSet<Opportunity> Opportunities { get; set; }
+        public DbSet<Project> Projects { get; set; }
 
+        
         public KairosDbContext()
             : base(nameOrConnectionString: "Kairos")
         { }
@@ -23,7 +28,8 @@ namespace Kairos.DAL
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
-            //Add Entity Type Configurations here
+            modelBuilder.Configurations.Add(new OpportunityConfiguration());
+            modelBuilder.Configurations.Add(new ProjectConfiguration());
         }
     }
 }
