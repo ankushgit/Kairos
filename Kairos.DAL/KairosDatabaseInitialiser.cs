@@ -36,7 +36,10 @@ namespace Kairos.DAL
             {
                 Project prj = new Project
                 {
-
+                    Description = "Project " + i.ToString(),
+                    Duration = i,
+                    StartDate = DateTime.Now.AddDays(i),
+                    EndDate = DateTime.Now.AddMonths(i)
                 };
                 context.Projects.Add(prj);
             }

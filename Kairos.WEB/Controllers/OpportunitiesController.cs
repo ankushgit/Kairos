@@ -1,4 +1,6 @@
 ﻿using Kairos.DAL;
+using Kairos.MODEL;
+using Kairos.WEB.DTO;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,31 +17,105 @@ namespace Kairos.WEB.Controllers
             this._dbUnit = dbUnit;
         }
 
-        // GET api/<controller>
-        public IEnumerable<string> Get()
+        // GET api/Opportunities
+        public IEnumerable<OpportunityDTO> Get()
         {
-            return new string[] { "value1", "value2" };
+            //TIP: IN EF 6 you will need to reference EF 6 pacakage from the web project even if you are not using it directly from here
+            List<OpportunityDTO> opportunities = new List<OpportunityDTO>();
+            _dbUnit.Opportunities.FindAll().ToList().ForEach(o => opportunities.Add(new OpportunityDTO
+            {
+                Id = o.Id,
+                Description = o.Description,
+                Client = o.Client,
+                PrimaryContact = o.PrimaryContact,
+                Telno = o.Telno
+            }));
+            return opportunities;
         }
 
-        // GET api/<controller>/5
-        public string Get(int id)
+        // GET api/Opportunities/5
+        public OpportunityDTO Get(int id)
         {
-            return "value";
+            Opportunity entity = _dbUnit.Opportunities.FindByID(id);
+            if (entity == null)
+                throw new HttpResponseException(HttpStatusCode.NotFound);
+
+            return new OpportunityDTO
+            {
+                Id = entity.Id,
+                Description = entity.Description,
+                Client = entity.Client,
+                PrimaryContact = entity.PrimaryContact,
+                Telno = entity.Telno
+            };
         }
 
-        // POST api/<controller>
-        public void Post([FromBody]string value)
+        // POST api/Opportunities
+        public HttpResponseMessage Post([FromBody]OpportunityDTO opp)
         {
+            //TIP: Because of ValidationActionFilter, the parameters would have been validated when we reach this point.
+            Opportunity newOpportunity = new Opportunity
+            {
+                Description = opp.Description,
+                Client = opp.Client,
+                PrimaryContact = opp.PrimaryContact,
+                Telno = opp.Telno
+            };
+
+            _dbUnit.Opportunities.Add(newOpportunity);
+            try
+            {
+                _dbUnit.Commit();
+            }
+            catch (Exception ex)
+            {
+                return Request.CreateResponse(HttpStatusCode.InternalServerError
+                    ,ex.Message);
+            }
+            opp.Id = newOpportunity.Id;
+            //TIP: Below two lines as per the http specification to include the id in the header
+            HttpResponseMessage response = Request.CreateResponse(HttpStatusCode.Created, opp);
+            response.Headers.Location = new Uri(Url.Link(WebApiConfig.ControllerAndId, new { id = opp.Id}));
+            return response;
         }
 
-        // PUT api/<controller>/5
-        public void Put(int id, [FromBody]string value)
+        // PUT api/Opportunities/5
+        public HttpResponseMessage Put(int id, [FromBody]OpportunityDTO opp)
         {
+            Opportunity dbOpp = _dbUnit.Opportunities.FindByID(opp.Id);
+            if (dbOpp == null)
+                throw new HttpResponseException(HttpStatusCode.NotFound);
+            dbOpp.Description = opp.Description;
+            dbOpp.Client = opp.Client;
+            dbOpp.PrimaryContact = opp.PrimaryContact;
+            dbOpp.Telno = opp.Telno;
+            try
+            {
+                _dbUnit.Commit();
+            }
+            catch (Exception ex)
+            {
+                return Request.CreateResponse(HttpStatusCode.InternalServerError, ex.Message);
+            }
+            return Request.CreateResponse(HttpStatusCode.OK);
         }
 
-        // DELETE api/<controller>/5
-        public void Delete(int id)
+        // DELETE api/Opportunities/5
+        public HttpResponseMessage Delete(int id)
         {
+            Opportunity oppToDelete = _dbUnit.Opportunities.FindByID(id);
+            if(oppToDelete == null)
+                throw new HttpResponseException(HttpStatusCode.NotFound);
+            _dbUnit.Opportunities.Remove(oppToDelete);
+            try
+            {
+                _dbUnit.Commit();
+            }
+            catch (Exception ex)
+            {
+                return Request.CreateResponse(HttpStatusCode.InternalServerError, ex.Message);
+            }
+            return Request.CreateResponse(HttpStatusCode.OK);
         }
     }
 }
