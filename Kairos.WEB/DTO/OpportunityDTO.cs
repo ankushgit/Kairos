@@ -19,6 +19,10 @@ namespace Kairos.WEB.DTO
         public string Client { get; set; }
 
         [Required]
+        [MaxLength(100)]
+        public string Sector { get; set; }
+
+        [Required]
         [MaxLength(100)]        
         public string PrimaryContact { get; set; }
 

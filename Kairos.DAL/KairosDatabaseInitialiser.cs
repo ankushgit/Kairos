@@ -23,6 +23,7 @@ namespace Kairos.DAL
                 {
                     Description = "Opportunity " + i.ToString(),
                     Client = "Client " + i.ToString(),
+                    Sector = i % 2 == 0 ? "Public" : "Private",
                     PrimaryContact = "Contact " + i.ToString(),
                     Telno = (i * 1000).ToString()
                 };

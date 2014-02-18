@@ -27,6 +27,7 @@ namespace Kairos.WEB.Controllers
                 Id = o.Id,
                 Description = o.Description,
                 Client = o.Client,
+                Sector = o.Sector,
                 PrimaryContact = o.PrimaryContact,
                 Telno = o.Telno
             }));
@@ -45,6 +46,7 @@ namespace Kairos.WEB.Controllers
                 Id = entity.Id,
                 Description = entity.Description,
                 Client = entity.Client,
+                Sector = entity.Sector,
                 PrimaryContact = entity.PrimaryContact,
                 Telno = entity.Telno
             };
@@ -58,6 +60,7 @@ namespace Kairos.WEB.Controllers
             {
                 Description = opp.Description,
                 Client = opp.Client,
+                Sector = opp.Sector,
                 PrimaryContact = opp.PrimaryContact,
                 Telno = opp.Telno
             };
@@ -87,6 +90,7 @@ namespace Kairos.WEB.Controllers
                 throw new HttpResponseException(HttpStatusCode.NotFound);
             dbOpp.Description = opp.Description;
             dbOpp.Client = opp.Client;
+            dbOpp.Sector = opp.Sector;
             dbOpp.PrimaryContact = opp.PrimaryContact;
             dbOpp.Telno = opp.Telno;
             try
