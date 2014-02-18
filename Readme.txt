@@ -1,5 +1,5 @@
 ABOUT
-This project code named Kairos [http://en.wikipedia.org/wiki/Kairos] is a single page application that acts as a repository for all opportunities, engagements & projects 
+This project code named Kairos [http://en.wikipedia.org/wiki/Kairos] is a single page application that acts as a repository for all opportunities
 
 TECHNOLOGIES
 ------------------------------------------------------------------------	

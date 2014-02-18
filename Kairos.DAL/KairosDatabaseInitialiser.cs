@@ -11,7 +11,7 @@ namespace Kairos.DAL
         protected override void Seed(KairosDbContext context)
         {
             addOpportunities(context);
-            addProjects(context);
+           
             base.Seed(context); //TIP: This will call save changes on the context
         }
 
@@ -29,23 +29,6 @@ namespace Kairos.DAL
                 context.Opportunities.Add(opp);
             }
         }
-
-        private void addProjects(KairosDbContext context)
-        {
-            for(int i=1;i<=10;i++)
-            {
-                Project prj = new Project
-                {
-                    Description = "Project " + i.ToString(),
-                    Duration = i,
-                    StartDate = DateTime.Now.AddDays(i),
-                    EndDate = DateTime.Now.AddMonths(i)
-                };
-                context.Projects.Add(prj);
-            }
-        }
-
-
 
     }
 }

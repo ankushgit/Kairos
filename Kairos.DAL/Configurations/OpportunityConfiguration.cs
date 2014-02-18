@@ -14,6 +14,7 @@ namespace Kairos.DAL.Configurations
         {
             this.Property(t => t.Description).HasMaxLength(1000).IsRequired();
             this.Property(t => t.Client).HasMaxLength(200).IsRequired();
+            this.Property(t => t.Sector).HasMaxLength(100).IsRequired();
             this.Property(t => t.PrimaryContact).HasMaxLength(100).IsRequired();
             this.Property(t => t.Telno).HasMaxLength(20).IsRequired();
         }

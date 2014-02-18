@@ -48,7 +48,6 @@
   <ItemGroup>
     <Compile Include="DbUnit.cs" />
     <Compile Include="Configurations\OpportunityConfiguration.cs" />
-    <Compile Include="Configurations\ProjectConfiguration.cs" />
     <Compile Include="IDbUnit.cs" />
     <Compile Include="IRepository.cs" />
     <Compile Include="KairosDatabaseInitialiser.cs" />

@@ -10,7 +10,6 @@ namespace Kairos.DAL
     {
         private KairosDbContext _dbContext = new KairosDbContext();
         private Repository<Opportunity> _opportunityRepo;
-        private Repository<Project> _projectRepo;
 
         public IRepository<Opportunity> Opportunities
         {
@@ -19,16 +18,6 @@ namespace Kairos.DAL
                 if (_opportunityRepo == null)
                     _opportunityRepo = new Repository<Opportunity>(_dbContext);
                 return _opportunityRepo;                
-            }
-        }
-
-        public IRepository<Project> Projects
-        {
-            get 
-            {
-                if (_projectRepo == null)
-                    _projectRepo = new Repository<Project>(_dbContext);
-                return _projectRepo;
             }
         }
 

@@ -10,6 +10,7 @@ namespace Kairos.MODEL
     {
         public int Id { get; set; }
         public string Description { get; set; }
+        public string Sector { get; set; }
         public string Client { get; set; }
         public string PrimaryContact { get; set; }
         public string Telno { get; set; }

@@ -9,7 +9,7 @@ namespace Kairos.DAL
     public interface IDbUnit : IDisposable
     {
         IRepository<Opportunity> Opportunities { get; }
-        IRepository<Project> Projects { get; }
+
         void Commit();
     }
 }

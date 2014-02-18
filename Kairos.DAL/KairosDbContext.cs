@@ -13,7 +13,7 @@ namespace Kairos.DAL
     {
         //Declare DBSets here.
         public DbSet<Opportunity> Opportunities { get; set; }
-        public DbSet<Project> Projects { get; set; }
+
 
         
         public KairosDbContext()
@@ -29,7 +29,7 @@ namespace Kairos.DAL
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Configurations.Add(new OpportunityConfiguration());
-            modelBuilder.Configurations.Add(new ProjectConfiguration());
+
         }
     }
 }

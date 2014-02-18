@@ -11,11 +11,6 @@ module.config(function ($routeProvider) {
         templateUrl: "/Templates/opportunities.html"
     });
 
-    $routeProvider.when("/projects", {
-        controller: "projectsController",
-        templateUrl: "/Templates/projects.html"
-    });
-
     $routeProvider.otherwise({redirectTo: "/"});
 });
 
