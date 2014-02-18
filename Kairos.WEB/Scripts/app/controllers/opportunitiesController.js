@@ -1,3 +1,3 @@
 ﻿function opportunitiesController($scope) {
-    $scope.title = "Opportunities";
+    $scope.title = "Manage Opportunities";
 }
