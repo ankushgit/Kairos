@@ -160,6 +160,7 @@
     <Content Include="Scripts\app\controllers\opportunitiesController.js" />
     <Content Include="Scripts\app\controllers\homeController.js" />
     <Content Include="Scripts\app\kairos.js" />
+    <Content Include="Scripts\app\services\opportunitiesService.js" />
     <Content Include="Scripts\lib\angular-route.js" />
     <Content Include="Scripts\lib\angular-route.min.js" />
     <Content Include="Scripts\lib\angular.js" />

@@ -12,8 +12,13 @@
         </table>
     </div>
 </div>
+<div class="row">
+    <div class="progress progress-striped active" ng-show="isBusy">
+        <div class="progress-bar" style="width: 100%"></div>
+    </div>
+</div>
 <!--<div class="row">
-    <div class="col-lg-4 input-group">        
+    <div class="col-lg-4 input-group">
         <span class="input-group-addon input-small glyphicon glyphicon-search"></span>
         <input name="inputSearch" class="form-control input-small" type="text" placeholder="enter filter criteria..." />
     </div>
@@ -32,34 +37,15 @@
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td >123</td>
-                    <td >ABCD Coporation Limited</td>
-                    <td>Public</td>
-                    <td>Ben Abbot</td>
-                    <td>1234-0988</td>
+                <tr ng-repeat="i in data.opportunities">
+                    <td>{{i.id}}</td>
+                    <td>{{i.client}}</td>
+                    <td>{{i.sector}}</td>
+                    <td>{{i.primaryContact}}</td>
+                    <td>{{i.telno}}</td>
                     <td><button class="btn btn btn-link btn-small"><span class="glyphicon glyphicon-edit"></span>&nbsp;Edit</button></td>
                     <td><button class="btn btn btn-link btn-small"><span class="glyphicon glyphicon-remove"></span>&nbsp;Delete</button></td>
                 </tr>
-                <tr>
-                    <td>123</td>
-                    <td>ABCD Coporation Limited</td>
-                    <td>Public</td>
-                    <td>Ben Abbot</td>
-                    <td>1234-0988</td>
-                    <td><button class="btn btn btn-link btn-small"><span class="glyphicon glyphicon-edit"></span>&nbsp;Edit</button></td>
-                    <td><button class="btn btn btn-link btn-small"><span class="glyphicon glyphicon-remove"></span>&nbsp;Delete</button></td>
-                </tr>
-                <tr>
-                    <td>123</td>
-                    <td>ABCD Coporation Limited</td>
-                    <td>Public</td>
-                    <td>Ben Abbot</td>
-                    <td>1234-0988</td>
-                    <td><button class="btn btn btn-link btn-small"><span class="glyphicon glyphicon-edit"></span>&nbsp;Edit</button></td>
-                    <td><button class="btn btn btn-link btn-small"><span class="glyphicon glyphicon-remove"></span>&nbsp;Delete</button></td>
-                </tr>
-
             </tbody>
         </table>
     </div>

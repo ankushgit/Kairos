@@ -41,6 +41,9 @@ namespace Kairos.WEB
             //Add Controllers
             bundles.Add(new ScriptBundle("~/Scripts/app/controllers").Include(
                 "~/Scripts/app/controllers/*.js"));
+            //Add Services
+            bundles.Add(new ScriptBundle("~/Scripts/app/services").Include(
+                "~/Scripts/app/services/*.js"));
 
             #endregion
 

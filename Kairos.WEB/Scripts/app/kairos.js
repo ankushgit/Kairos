@@ -1,5 +1,6 @@
 ﻿var module = angular.module("kairos", ['ngRoute']);
 
+/*Client Side Routes Configuration*/
 module.config(function ($routeProvider) {
     $routeProvider.when("/", {
         controller: "homeController",
@@ -14,7 +15,7 @@ module.config(function ($routeProvider) {
     $routeProvider.otherwise({redirectTo: "/"});
 });
 
-/* data-active-menu */
+/* Directive: data-active-menu */
 module.directive("activeMenu", function ($location) {
     var link = function (scope, element) {
         var menuItems = element.children();
