@@ -22,7 +22,7 @@ namespace Kairos.WEB.Controllers
         {
             //TIP: IN EF 6 you will need to reference EF 6 pacakage from the web project even if you are not using it directly from here
             List<OpportunityDTO> opportunities = new List<OpportunityDTO>();
-            _dbUnit.Opportunities.FindAll().ToList().ForEach(o => opportunities.Add(new OpportunityDTO
+            _dbUnit.Opportunities.FindAll().OrderByDescending(o => o.Id).ToList().ForEach(o => opportunities.Add(new OpportunityDTO
             {
                 Id = o.Id,
                 Description = o.Description,

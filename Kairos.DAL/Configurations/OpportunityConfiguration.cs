@@ -12,7 +12,7 @@ namespace Kairos.DAL.Configurations
     {
         public OpportunityConfiguration()
         {
-            this.Property(t => t.Description).HasMaxLength(1000).IsRequired();
+            this.Property(t => t.Description).HasMaxLength(5000).IsRequired();
             this.Property(t => t.Client).HasMaxLength(200).IsRequired();
             this.Property(t => t.Sector).HasMaxLength(100).IsRequired();
             this.Property(t => t.PrimaryContact).HasMaxLength(100).IsRequired();

@@ -12,6 +12,11 @@ module.config(function ($routeProvider) {
         templateUrl: "/Templates/opportunities.html"
     });
 
+    $routeProvider.when("/opportunities/add", {
+        controller: "addOpportunitiesController",
+        templateUrl: "/Templates/addOpportunities.html"
+    });
+
     $routeProvider.otherwise({redirectTo: "/"});
 });
 
@@ -29,7 +34,8 @@ module.directive("activeMenu", function ($location) {
             menuItems.removeClass("active");
             if (newPath == "")
                 newPath = "/";
-            tabMap[newPath].addClass("active");
+            if(tabMap[newPath]) //if the map is not defined then no need to add class
+                tabMap[newPath].addClass("active");
         });        
     };
     return {

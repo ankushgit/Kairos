@@ -2,3 +2,7 @@
     width:100%;
     border-bottom:4px solid #dfdfdf;
 }
+
+.error {
+    color: #b94a48;
+}

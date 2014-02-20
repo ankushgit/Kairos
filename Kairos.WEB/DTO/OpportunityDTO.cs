@@ -11,7 +11,7 @@ namespace Kairos.WEB.DTO
         public int Id { get; set; }
 
         [Required]
-        [MaxLength(1000)]
+        [MaxLength(5000)]
         public string Description { get; set; }
 
         [Required]

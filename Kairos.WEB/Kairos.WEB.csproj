@@ -157,6 +157,7 @@
     <Content Include="Content\fonts\glyphicons-halflings-regular.woff" />
     <Content Include="Content\fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="Content\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Scripts\app\controllers\addOpportunitiesController.js" />
     <Content Include="Scripts\app\controllers\opportunitiesController.js" />
     <Content Include="Scripts\app\controllers\homeController.js" />
     <Content Include="Scripts\app\kairos.js" />
@@ -176,6 +177,7 @@
     <Content Include="Scripts\lib\modernizr-2.7.1.js" />
     <Content Include="Templates\home.html" />
     <Content Include="Templates\opportunities.html" />
+    <Content Include="Templates\addOpportunities.html" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
