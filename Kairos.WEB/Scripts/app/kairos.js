@@ -17,6 +17,11 @@ module.config(function ($routeProvider) {
         templateUrl: "/Templates/addOpportunities.html"
     });
 
+    $routeProvider.when("/opportunities/edit/:id", {
+        controller: "editOpportunitiesController",
+        templateUrl: "/Templates/editOpportunities.html"
+    });
+
     $routeProvider.otherwise({redirectTo: "/"});
 });
 

@@ -1,0 +1,57 @@
+﻿<div class="row">
+    <div class="col-lg-12">
+        <div class="well">
+            <form name="editOpportunityForm" class="bs-example form-horizontal" novalidate ng-submit="save()">
+                <fieldset>
+                    <legend>{{title}}</legend>
+                    <div class="form-group">
+                        <label for="editOppClient" class="col-lg-2 control-label">Client</label>
+                        <div class="col-lg-7">
+                            <input type="text" class="form-control" id="editOppClient" name="editOppClient" placeholder="Enter Client Name..." ng-model="opportunity.client" required ng-maxlength="200">
+                            <span class="error" ng-show="editOpportunityForm.editOppClient.$error.required">Client Name is required</span>
+                            <span class="error" ng-show="editOpportunityForm.editOppClient.$error.maxlength">Max Length for Client name is 200</span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="editOppDescription" class="col-lg-2 control-label">Opportunity Description</label>
+                        <div class="col-lg-10">
+                            <textarea class="form-control" rows="5" id="editOppDescription" name="editOppDescription" placeholder="Enter Opportunity Description..." ng-model="opportunity.description" required ng-maxlength="5000"></textarea>
+                            <span class="error" ng-show="editOpportunityForm.editOppDescription.$error.required">Client Name is required</span>
+                            <span class="error" ng-show="editOpportunityForm.editOppDescription.$error.maxlength">Max Length for Description is 5000</span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="editOppSector" class="col-lg-2 control-label">Sector</label>
+                        <div class="col-lg-4">
+                            <input type="text" class="form-control" id="editOppSector" name="editOppSector" placeholder="Enter Sector..." ng-model="opportunity.sector" required ng-maxlength="100">
+                            <span class="error" ng-show="editOpportunityForm.editOppSector.$error.required">Sector is required</span>
+                            <span class="error" ng-show="editOpportunityForm.editOppSector.$error.maxlength">Max Length for Sector is 100</span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="editOppPrimaryContact" class="col-lg-2 control-label">Primary Contact</label>
+                        <div class="col-lg-4">
+                            <input type="text" class="form-control" id="editOppPrimaryContact" name="editOppPrimaryContact" placeholder="Enter Name of Primary Contact Person..." ng-model="opportunity.primaryContact" required ng-maxlength="100">
+                            <span class="error" ng-show="editOpportunityForm.editOppPrimaryContact.$error.required">Primary Contact is required</span>
+                            <span class="error" ng-show="editOpportunityForm.editOppPrimaryContact.$error.maxlength">Max Length for Primary Contact is 100</span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="editOppTelno" class="col-lg-2 control-label">Telephone Number</label>
+                        <div class="col-lg-3">
+                            <input type="text" class="form-control" id="editOppTelno" name="editOppTelno" placeholder="Enter Telephone Number..." ng-model="opportunity.telno" required ng-maxlength="20">
+                            <span class="error" ng-show="editOpportunityForm.editOppTelno.$error.required">Telephone number is required</span>
+                            <span class="error" ng-show="editOpportunityForm.editOppTelno.$error.maxlength">Max Length for Telephone Number is 20</span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-lg-10 col-lg-offset-2">
+                            <a href="#/opportunities" class="btn btn-default">Cancel</a>
+                            <button type="submit" class="btn btn-primary" ng-disabled="editOpportunityForm.$invalid">Save</button>
+                        </div>
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+    </div>
+</div>
