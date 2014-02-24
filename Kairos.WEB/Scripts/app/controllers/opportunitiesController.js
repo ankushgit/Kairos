@@ -1,7 +1,9 @@
-﻿function opportunitiesController($scope, opportunitiesService) {
+﻿function opportunitiesController($scope, opportunitiesService,$filter) {
     $scope.title = "Manage Opportunities";
-    $scope.data = opportunitiesService; //TIP: need to bind to the service for angular to perform data binding / UI refresh
+    $scope.data = opportunitiesService.opportunities;
     $scope.isBusy = false;
+    $scope.filterText = "";
+
     var deleteID = undefined;
     $scope.deleteOppClick = function (id) {
         $('#deleteOppDialog').modal('show');
@@ -16,7 +18,7 @@
             //error
             alert("Could not delete this opportunity");
         });
-    };
+    };    
     if (!opportunitiesService.isInit)
     {
         $scope.isBusy = true;

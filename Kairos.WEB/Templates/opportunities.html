@@ -13,16 +13,21 @@
     </div>
 </div>
 <div class="row">
-    <div class="progress progress-striped active" ng-show="isBusy">
-        <div class="progress-bar" style="width: 100%"></div>
+    <div class="col-lg-12">
+        <div class="progress progress-striped active" ng-show="isBusy">
+            <div class="progress-bar" style="width: 100%"></div>
+        </div>
     </div>
 </div>
-<!--<div class="row">
-    <div class="col-lg-4 input-group">
-        <span class="input-group-addon input-small glyphicon glyphicon-search"></span>
-        <input name="inputSearch" class="form-control input-small" type="text" placeholder="enter filter criteria..." />
+<br />
+<div class="row">
+    <div class="col-lg-5">
+        <div class="input-group">
+            <span class="input-group-addon input-sm glyphicon glyphicon-search"></span>
+            <input name="inputSearch" class="form-control input-sm" type="text" ng-model="filterText" placeholder="enter filter criteria..." />
+        </div>
     </div>
-</div>-->
+</div>
 <div class="row">
     <div class="col-lg-12">
         <table class="table table-striped table-hover table-bordered">
@@ -37,7 +42,7 @@
                 </tr>
             </thead>
             <tbody>
-                <tr ng-repeat="i in data.opportunities">
+                <tr ng-repeat="i in data | filter:filterText">
                     <td>{{i.id}}</td>
                     <td>{{i.client}}</td>
                     <td>{{i.sector}}</td>
