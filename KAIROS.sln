@@ -14,6 +14,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kairos.DAL", "Kairos.DAL\Ka
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kairos.MODEL", "Kairos.MODEL\Kairos.MODEL.csproj", "{33F731DE-E816-45A3-88D2-0143F8F5A362}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kairos.TEST", "Kairos.TEST\Kairos.TEST.csproj", "{E6D39531-7415-48C4-8A53-31E6A12A693A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -32,6 +34,10 @@ Global
 		{33F731DE-E816-45A3-88D2-0143F8F5A362}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{33F731DE-E816-45A3-88D2-0143F8F5A362}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{33F731DE-E816-45A3-88D2-0143F8F5A362}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E6D39531-7415-48C4-8A53-31E6A12A693A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E6D39531-7415-48C4-8A53-31E6A12A693A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E6D39531-7415-48C4-8A53-31E6A12A693A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E6D39531-7415-48C4-8A53-31E6A12A693A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
