@@ -6,7 +6,7 @@ using System.Data.Entity;
 using Kairos.MODEL;
 namespace Kairos.DAL
 {
-    public class KairosDatabaseInitialiser : DropCreateDatabaseIfModelChanges<KairosDbContext>
+    public class KairosDatabaseInitialiser : DropCreateDatabaseAlways<KairosDbContext>
     {
         protected override void Seed(KairosDbContext context)
         {
