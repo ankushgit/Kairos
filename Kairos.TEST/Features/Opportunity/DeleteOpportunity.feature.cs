@@ -11,7 +11,7 @@
 // ------------------------------------------------------------------------------
 #region Designer generated code
 #pragma warning disable
-namespace Kairos.TEST.Features
+namespace Kairos.TEST.Features.Opportunity
 {
     using TechTalk.SpecFlow;
     
@@ -49,7 +49,7 @@ namespace Kairos.TEST.Features
             if (((TechTalk.SpecFlow.FeatureContext.Current != null) 
                         && (TechTalk.SpecFlow.FeatureContext.Current.FeatureInfo.Title != "Delete Opportunity")))
             {
-                Kairos.TEST.Features.DeleteOpportunityFeature.FeatureSetup(null);
+                Kairos.TEST.Features.Opportunity.DeleteOpportunityFeature.FeatureSetup(null);
             }
         }
         

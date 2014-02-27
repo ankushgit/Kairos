@@ -11,7 +11,7 @@
 // ------------------------------------------------------------------------------
 #region Designer generated code
 #pragma warning disable
-namespace Kairos.TEST.Features
+namespace Kairos.TEST.Features.Opportunity
 {
     using TechTalk.SpecFlow;
     
@@ -19,20 +19,20 @@ namespace Kairos.TEST.Features
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "1.9.0.77")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [Microsoft.VisualStudio.TestTools.UnitTesting.TestClassAttribute()]
-    public partial class ViewAndFilterOpportunitiesFeature
+    public partial class EditOpportunityFeature
     {
         
         private static TechTalk.SpecFlow.ITestRunner testRunner;
         
-#line 1 "ViewandFilterOpportunities.feature"
+#line 1 "EditOpportunity.feature"
 #line hidden
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.ClassInitializeAttribute()]
         public static void FeatureSetup(Microsoft.VisualStudio.TestTools.UnitTesting.TestContext testContext)
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "View and Filter Opportunities", "As a Sales Manager\r\nI want to View and Filter Opportunities\r\nSo that I can work o" +
-                    "n them", ProgrammingLanguage.CSharp, ((string[])(null)));
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Edit Opportunity", "As a Sales Manager\nI want to be able to Edit Opportunity\nSo that I have up to dat" +
+                    "e record of opportunities", ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -47,9 +47,9 @@ namespace Kairos.TEST.Features
         public virtual void TestInitialize()
         {
             if (((TechTalk.SpecFlow.FeatureContext.Current != null) 
-                        && (TechTalk.SpecFlow.FeatureContext.Current.FeatureInfo.Title != "View and Filter Opportunities")))
+                        && (TechTalk.SpecFlow.FeatureContext.Current.FeatureInfo.Title != "Edit Opportunity")))
             {
-                Kairos.TEST.Features.ViewAndFilterOpportunitiesFeature.FeatureSetup(null);
+                Kairos.TEST.Features.Opportunity.EditOpportunityFeature.FeatureSetup(null);
             }
         }
         
@@ -70,35 +70,43 @@ namespace Kairos.TEST.Features
         }
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("View All Opportunities")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "View and Filter Opportunities")]
-        public virtual void ViewAllOpportunities()
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("View Edit Opportunity Screen")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Edit Opportunity")]
+        public virtual void ViewEditOpportunityScreen()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("View All Opportunities", ((string[])(null)));
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("View Edit Opportunity Screen", ((string[])(null)));
 #line 6
 this.ScenarioSetup(scenarioInfo);
 #line 7
 testRunner.Given("I am on Opportunities Screen", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 8
-testRunner.Then("I should see the list of all opportunities", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.When("I click Edit Opportunity link", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 9
+testRunner.Then("the relevant record should be shown in edit mode", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Filter Opportunties")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "View and Filter Opportunities")]
-        public virtual void FilterOpportunties()
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Edit Opportunity and Save")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Edit Opportunity")]
+        public virtual void EditOpportunityAndSave()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Filter Opportunties", ((string[])(null)));
-#line 10
-this.ScenarioSetup(scenarioInfo);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Edit Opportunity and Save", ((string[])(null)));
 #line 11
-testRunner.Given("I am on Opportunities Screen", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+this.ScenarioSetup(scenarioInfo);
 #line 12
-testRunner.When("I type \"private\" as the filter criteria", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.Given("I am on Opportunities Screen", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 13
-testRunner.Then("I should see 5 opportunities", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.When("I click Edit Opportunity link", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 14
+ testRunner.And("change the opportunity data on the form", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 15
+ testRunner.And("press save on the edited opportunity", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 16
+testRunner.Then("I am on Opportunities Screen", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 17
+ testRunner.And("the edited Opportunity is listed on the screen", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
         }

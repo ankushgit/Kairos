@@ -11,7 +11,7 @@
 // ------------------------------------------------------------------------------
 #region Designer generated code
 #pragma warning disable
-namespace Kairos.TEST.Features
+namespace Kairos.TEST.Features.Opportunity
 {
     using TechTalk.SpecFlow;
     
@@ -19,20 +19,20 @@ namespace Kairos.TEST.Features
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "1.9.0.77")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [Microsoft.VisualStudio.TestTools.UnitTesting.TestClassAttribute()]
-    public partial class AddOpportunityFeature
+    public partial class ViewAndFilterOpportunitiesFeature
     {
         
         private static TechTalk.SpecFlow.ITestRunner testRunner;
         
-#line 1 "AddOpportunity.feature"
+#line 1 "ViewandFilterOpportunities.feature"
 #line hidden
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.ClassInitializeAttribute()]
         public static void FeatureSetup(Microsoft.VisualStudio.TestTools.UnitTesting.TestContext testContext)
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Add Opportunity", "As a Sales Manager\nI want to Add Opportunity\nSo that we have record of all opport" +
-                    "unities", ProgrammingLanguage.CSharp, ((string[])(null)));
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "View and Filter Opportunities", "As a Sales Manager\r\nI want to View and Filter Opportunities\r\nSo that I can work o" +
+                    "n them", ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -47,9 +47,9 @@ namespace Kairos.TEST.Features
         public virtual void TestInitialize()
         {
             if (((TechTalk.SpecFlow.FeatureContext.Current != null) 
-                        && (TechTalk.SpecFlow.FeatureContext.Current.FeatureInfo.Title != "Add Opportunity")))
+                        && (TechTalk.SpecFlow.FeatureContext.Current.FeatureInfo.Title != "View and Filter Opportunities")))
             {
-                Kairos.TEST.Features.AddOpportunityFeature.FeatureSetup(null);
+                Kairos.TEST.Features.Opportunity.ViewAndFilterOpportunitiesFeature.FeatureSetup(null);
             }
         }
         
@@ -70,45 +70,35 @@ namespace Kairos.TEST.Features
         }
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Add Valid Opportunity")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Add Opportunity")]
-        public virtual void AddValidOpportunity()
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("View All Opportunities")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "View and Filter Opportunities")]
+        public virtual void ViewAllOpportunities()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Add Valid Opportunity", ((string[])(null)));
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("View All Opportunities", ((string[])(null)));
 #line 6
 this.ScenarioSetup(scenarioInfo);
 #line 7
 testRunner.Given("I am on Opportunities Screen", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 8
-testRunner.When("I click on Create New Button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 9
- testRunner.And("enter valid data on the form", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 10
- testRunner.And("click Save button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 11
-testRunner.Then("I am on Opportunities Screen", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 12
- testRunner.And("the newly added opportunity is listed at the top", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+testRunner.Then("I should see the list of all opportunities", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Add Opportunity without Client")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Add Opportunity")]
-        public virtual void AddOpportunityWithoutClient()
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Filter Opportunties")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "View and Filter Opportunities")]
+        public virtual void FilterOpportunties()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Add Opportunity without Client", ((string[])(null)));
-#line 14
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Filter Opportunties", ((string[])(null)));
+#line 10
 this.ScenarioSetup(scenarioInfo);
-#line 15
+#line 11
 testRunner.Given("I am on Opportunities Screen", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 16
-testRunner.When("I click on Create New Button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 17
- testRunner.And("enter valid data on the form but leave client field blank", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 18
-testRunner.Then("the save button should be disabled", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 12
+testRunner.When("I type \"private\" as the filter criteria", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 13
+testRunner.Then("I should see 5 opportunities", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }

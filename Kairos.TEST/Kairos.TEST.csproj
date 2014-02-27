@@ -53,51 +53,57 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="DeleteOpportunitySteps.cs" />
-    <Compile Include="Features\AddOpportunity.feature.cs">
+    <Compile Include="Step Definitions\Opportunity\DeleteOpportunitySteps.cs" />
+    <Compile Include="Features\Opportunity\AddOpportunity.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>AddOpportunity.feature</DependentUpon>
     </Compile>
-    <Compile Include="Features\DeleteOpportunity.feature.cs">
+    <Compile Include="Features\Opportunity\DeleteOpportunity.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DeleteOpportunity.feature</DependentUpon>
     </Compile>
-    <Compile Include="Features\EditOpportunity.feature.cs">
+    <Compile Include="Features\Opportunity\EditOpportunity.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>EditOpportunity.feature</DependentUpon>
     </Compile>
-    <Compile Include="Step Definitions\AddOpportunitySteps.cs" />
+    <Compile Include="Step Definitions\Opportunity\AddOpportunitySteps.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Features\ViewandFilterOpportunities.feature.cs">
+    <Compile Include="Features\Opportunity\ViewandFilterOpportunities.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>ViewandFilterOpportunities.feature</DependentUpon>
     </Compile>
-    <Compile Include="Step Definitions\EditOpportunitySteps.cs" />
-    <Compile Include="Step Definitions\ViewAndFilterOpportunitiesSteps.cs" />
+    <Compile Include="Step Definitions\Opportunity\EditOpportunitySteps.cs" />
+    <Compile Include="Step Definitions\Opportunity\ViewAndFilterOpportunitiesSteps.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Features\AddOpportunity.feature">
+    <None Include="Features\Opportunity\AddOpportunity.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>AddOpportunity.feature.cs</LastGenOutput>
     </None>
     <None Include="App.config" />
-    <None Include="Features\DeleteOpportunity.feature">
+    <None Include="Features\Opportunity\DeleteOpportunity.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>DeleteOpportunity.feature.cs</LastGenOutput>
     </None>
-    <None Include="Features\EditOpportunity.feature">
+    <None Include="Features\Opportunity\EditOpportunity.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>EditOpportunity.feature.cs</LastGenOutput>
     </None>
     <None Include="packages.config" />
-    <None Include="Features\ViewandFilterOpportunities.feature">
+    <None Include="Features\Opportunity\ViewandFilterOpportunities.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>ViewandFilterOpportunities.feature.cs</LastGenOutput>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Kairos.AUTOMATION\Kairos.AUTOMATION.csproj">
+      <Project>{f86fe559-0d01-4c1f-a624-c33d9a54f0a0}</Project>
+      <Name>Kairos.AUTOMATION</Name>
+    </ProjectReference>
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
