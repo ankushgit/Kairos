@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Kairos.AUTOMATION;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System;
 using TechTalk.SpecFlow;
 
 namespace Kairos.TEST
@@ -9,43 +11,43 @@ namespace Kairos.TEST
         [When(@"I click on Create New Button")]
         public void WhenIClickOnCreateNewButton()
         {
-            ScenarioContext.Current.Pending();
+            OpportunityPage.CreateNew();
         }
 
         [When(@"enter valid data on the form")]
         public void WhenEnterValidDataOnTheForm()
         {
-            ScenarioContext.Current.Pending();
+            OpportunityPage.FillForm();
         }
 
         [When(@"click Save button")]
         public void WhenClickSaveButton()
         {
-            ScenarioContext.Current.Pending();
+            OpportunityPage.Save();
         }
 
         [When(@"enter valid data on the form but leave client field blank")]
         public void WhenEnterValidDataOnTheFormButLeaveClientFieldBlank()
         {
-            ScenarioContext.Current.Pending();
+            OpportunityPage.FillForm(Fill.NonMandatoryOnly);
         }
 
         [Then(@"I am on Opportunities Screen")]
         public void ThenIAmOnOpportunitiesScreen()
         {
-            ScenarioContext.Current.Pending();
+            Assert.IsTrue(OpportunityPage.IsAt, "Error Navigating back to Opportunity Screen");
         }
 
         [Then(@"the newly added opportunity is listed at the top")]
         public void ThenTheNewlyAddedOpportunityIsListedAtTheTop()
         {
-            ScenarioContext.Current.Pending();
+            Assert.IsTrue(OpportunityPage.OpportunityAdded, "Error in Creating New Opportunity");
         }
 
         [Then(@"the save button should be disabled")]
         public void ThenTheSaveButtonShouldBeDisabled()
         {
-            ScenarioContext.Current.Pending();
+            Assert.IsTrue(OpportunityPage.SaveDisabled, "Test Failed as Save button is Not Disabled");
         }
     }
 }

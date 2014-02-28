@@ -53,6 +53,7 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="SpecFlowHooks.cs" />
     <Compile Include="Step Definitions\Opportunity\DeleteOpportunitySteps.cs" />
     <Compile Include="Features\Opportunity\AddOpportunity.feature.cs">
       <AutoGen>True</AutoGen>
