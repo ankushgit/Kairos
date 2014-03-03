@@ -17,6 +17,8 @@ namespace Kairos.AUTOMATION
         private const int TIMEOUT = 300; //seconds
         public static IWebDriver Instance { get; set; }
 
+        public static string BaseAddress { get { return "http://localhost:49768/"; } }
+
         public static void Initialise()
         {
             Instance = new ChromeDriver();

@@ -52,7 +52,7 @@ namespace Kairos.AUTOMATION
 
         public static void GoTo()
         {            
-            Driver.Instance.Navigate().GoToUrl("http://localhost:49768/#/opportunities");
+            Driver.Instance.Navigate().GoToUrl(Driver.BaseAddress + "#/opportunities");
         }
 
         public static bool AllOpportunitiesListed
